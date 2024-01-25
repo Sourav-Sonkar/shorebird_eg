@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shorebird_eg/widget/skeketon_container.dart';
+import 'package:shorebird_eg/widget/skeleton_container.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
