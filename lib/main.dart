@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shorebird_eg/screen/coming_soon.dart';
 import 'package:shorebird_eg/screen/home_page.dart';
 import 'package:shorebird_eg/screen/second_page.dart';
+import 'package:shorebird_eg/screen/third_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,14 +18,13 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
     const SecondScreen(),
+    const ThirdScreen(),
   ]; //list of pages
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      theme:ThemeData(
-        colorSchemeSeed:Colors.blueAccent
-      ),
+      theme: ThemeData(colorSchemeSeed: Colors.blueAccent),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Shorebird Example'),
@@ -39,7 +40,12 @@ class _MyAppState extends State<MyApp> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.business),
-              label: 'Business',
+              label: 'UI issues',
+              backgroundColor: Colors.green,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.crisis_alert_sharp),
+              label: 'Stuck',
               backgroundColor: Colors.green,
             ),
           ],

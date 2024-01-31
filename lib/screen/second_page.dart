@@ -1,19 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:shorebird_eg/widget/skeleton_container.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        buildSkeletonContainer(width: double.infinity, height: 200.0),
-        const SizedBox(height: 16.0),
-        buildSkeletonContainer(width: double.infinity, height: 50.0),
-        const SizedBox(height: 16.0),
-        buildSkeletonContainer(width: double.infinity, height: 100.0),
-      ],
+    return  SingleChildScrollView(
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("Pages contains 3 boxes."),
+            Container(
+              height: 600, // Fixed height
+              width: double.infinity,
+              color: Colors.blue,
+              child: const Text(
+                'Text 1',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            Container(
+              height: 400, // Fixed height
+              width: double.infinity,
+              color: Colors.green,
+              child: const Text(
+                'Text 2',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            Container(
+              height: 100, // Fixed height
+              width: double.infinity,
+              color: Colors.red,
+              child: const Text(
+                'Text 3',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
+        ),
     );
   }
 }
